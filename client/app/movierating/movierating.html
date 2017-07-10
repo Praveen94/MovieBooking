@@ -1,0 +1,160 @@
+<div class="container">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+  <div style="text-align: center"><img src="https://i.ytimg.com/vi/tquIfapGVqs/maxresdefault.jpg" alt="Image"  width="60%" height="400px">
+      </div>
+        <div class="carousel-caption">
+          <h3>The Boss Baby </h3>
+          <p>DreamWorks</p>
+        </div>
+
+</div>
+
+      <div class="item">
+        <div style="text-align: center">  <img src="http://cdn1-www.comingsoon.net/assets/uploads/2016/12/fatetitle.jpg" width="60%" height="400px" alt="Image">
+        </div>
+        <div class="carousel-caption">
+          <h3>The Fate Of The Furious</h3>
+          <p>Universal Pictures</p>
+        </div>
+      </div>
+
+      <div class="item">
+      <div style="text-align: center">  <img src="https://i.ytimg.com/vi/AGXtANIxx7U/maxresdefault.jpg" width="60%" height="400px" alt="Image">
+          </div>
+        <div class="carousel-caption">
+          <h3>Vedalam</h3>
+          <p>Shri Sai Ram Creations</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- <div class="container text-center">
+  <div class="h3 lead"><u>Now Showing</u></div><br>
+  <div class="row">
+<div class="movies">
+<div class="col-md-4">
+      <img src="{{home2Ctrl.moviedetails.Poster}}" class="img-responsive" style="width:220px;height:300px;vertical-align:middle" alt="Image">
+
+      <h3>
+      {{home2Ctrl.moviedetails.Title}}
+    </h3> <span class="label label-success" style="float:left">{{home2Ctrl.moviedetails.Language}}</span> <br /><span class="label label-info" style="float:left">{{home2Ctrl.moviedetails.Genre}}</span><br /><a href="#" class="btn btn-block btn-danger" type="button">Book Now</a>
+
+    </div>
+</div> -->
+</div>
+<div class="container text-center">
+  <div class="h3 lead"><u>Movie Rating</u></div><br>
+  <div class="row">
+<div class="movies" ng-repeat="movie in movieratingCtrl.moviedetails">
+<div class="col-md-4">
+      <img src="{{movie.Poster}}" class="img-responsive" style="width:220px;height:300px;vertical-align:middle" alt="Image">
+
+      <h3 class="title">
+      {{movie.Title}}
+    <!-- </h3> <span class="label label-success" style="float:left">{{movie.Language}}</span> <br /><span class="label label-info" style="float:left">{{movie.Genre}}</span><br /><a style="margin-bottom:5px" class="btn btn-block btn-danger" type="button" data-toggle="modal" ng-click="movieratingCtrl.StoreMovieDetails(movie.Title,movie.Language,movie.Poster)" data-target="#myModal">Rate Now</a>
+<a style="margin-bottom:5px" class="btn btn-block btn-info" type="button" data-toggle="modal" ng-click="movieratingCtrl.StoreMovieDetails(movie.Title,movie.Language,movie.Poster)" data-target="#ratingModal">View Rating</a> -->
+</h3> <span class="label label-success" style="float:left">{{movie.Language}}</span> <br /><span class="label label-info" style="float:left">{{movie.Genre}}</span><br /><a style="margin-bottom:5px" class="btn btn-block btn-danger" type="button" data-toggle="modal" ng-click="movieratingCtrl.StoreMovieDetails(movie.Title)" data-target="#myModal">Rate Now</a>
+<a style="margin-bottom:5px" class="btn btn-block btn-info" type="button" data-toggle="modal" ng-click="movieratingCtrl.GetMovieDetails(movie.Title)" data-target="#ratingModal">View Rating</a>
+
+</div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="lead modal-title text-warning">Movie Rating</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+
+              <p class="lead text-warning">Your Rating: </p>
+              <select name="rating"  class="form-control" id="rating" ng-model="movieratingCtrl.Rating" >
+
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select><br />
+            </div>
+
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+<a type="button" class="btn btn-success btn-block" ng-click="movieratingCtrl.SaveRating()" data-dismiss="modal">Rate Movie</a>
+<!-- <a type="button" class="btn btn-success btn-block" href="/theatreTime" target="_parent">Proceed</a> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ratingModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="lead modal-title text-danger">Rating</h4>
+          </div>
+          <div class="modal-body">
+            <p class="lead text-warning">Rating for this movie is: <span ng-bind="movieratingCtrl.averageRating">{{averageRating}}</span></p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    <!-- <a type="button" class="btn btn-success btn-block" href="/theatreTime" target="_parent">Proceed</a> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+</div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>

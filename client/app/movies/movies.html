@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" placeholder="Name" class="form-control" ng-model="moviesCtrl.Name" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Year" class="form-control" ng-model="moviesCtrl.Year" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Genre" class="form-control" ng-model="moviesCtrl.Genre" />
+      </div>
+      <button class="btn btn-success" ng-click="moviesCtrl.AddMovies()">Submit</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <tr>
+          <td>Name</td>
+          <td>Year</td>
+          <td>Genre</td>
+        </tr>
+        <tr ng-repeat="m in moviesCtrl.moviesData">
+          <td>{{m.Name}}</td>
+          <td>{{m.Year}}</td>
+          <td>{{m.Genre}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

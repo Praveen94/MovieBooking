@@ -1,0 +1,98 @@
+
+<div class="container-fluid">
+<div class="h4 text-info"><center>MovieMapping</center></div>
+<div class="form-group">
+      <label class="lead">Select the Movie:</label><select name="moviename" class="form-control" ng-model="moviemappingCtrl.MovieName">
+        <option ng-repeat="m in moviemappingCtrl.movie">{{m.Title}}</option>
+
+      </select>
+    <br />
+</div>
+
+
+
+    <div class="form-group">
+      <label class="lead">Select the City:<select name="cityname"  class="form-control" ng-model="moviemappingCtrl.cityName" >
+
+        <option ng-repeat="m in moviemappingCtrl.theatres |unique:'City'">{{m.City}}</option>
+      </select></label><br />
+    </div>
+
+
+<div class="row">
+<div class="col-xs-8">
+<div id='selecttheatres' class="form-group">
+  <div class="h4 lead">Select Your Theatre:</div>
+  <select id='theatreList' name='canselect_code'  class="form-control" ng-model="moviemappingCtrl.Theatres">
+
+    <option ng-repeat="c in moviemappingCtrl.theatres| filter:{'City':moviemappingCtrl.cityName}" ng-show="moviemappingCtrl.cityName" >{{c.TheatreName}}</option>
+  </select>
+
+</div>
+</div>
+<br /><br />
+<br /><br />
+<br /><br />
+<button id="addTheatre" type="button" class="btn btn-success">Add Theatre</button>
+</div>
+
+<br /><br />
+<br /><br />
+<br /><br />
+<div id="theatreselected">
+
+</div>
+
+
+<div class="form-group">
+    <div class="timemenu">
+      <label class="lead">Select the Timings:&nbsp;&nbsp;</label><select name="hour" id="hourlist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option></select>
+
+        <select name="minutes" id="minutelist" >
+          <option>05</option>
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>45</option>
+          <option>50</option>
+          <option>55</option>
+          </select>
+
+          <select name="day" id="daylist">
+            <option>AM</option>
+            <option>PM</option>
+              </select>
+&nbsp;&nbsp;&nbsp;<button id="addTime" type="button" class="btn btn-success">Add</button>
+<br /><br />
+<br />
+    </div></div>
+<div id="timeselected">
+
+
+    </div>
+
+
+    <div class="datemenu">
+        <p class="lead">Date: <input id="moviedate" />&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-success" id="dateAdd">Add</button>
+</p></div>
+<div id="dateselected">
+
+
+</div>
+<br /><br /><br /><br />
+<center><button class="btn btn-success" ng-click="moviemappingCtrl.SaveMapping()">Save Mapping</button></center>
+</div>

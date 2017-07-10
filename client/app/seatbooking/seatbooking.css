@@ -1,0 +1,67 @@
+.gold,.silver{
+
+  margin:5px 10px 10px 10px;
+  border:2px solid black;
+  padding:7px;
+  border-radius: 30%;
+  background-color: rgb(137, 140, 138);
+  text-align: center;
+  width:25px;
+  height:25px;
+
+
+}
+th.seatname{
+margin:10px;
+text-align: center;
+
+width:55px;
+padding:5px;
+}
+
+.table,.table-condensed{
+  width:60%!important;
+}
+
+.ticketdetails{
+position:relative;
+border-radius: 20px;
+background-color: #eee;
+height:470px;
+width:300px;
+
+float:right;
+}
+
+
+.table tr td div.description
+{
+  vertical-align: bottom;
+  text-align: left;
+  width: 270px;
+  height: 5px;
+  padding:10px 5px 10px 5px;
+  float: left;
+}
+
+
+div.ticketinfo
+{
+  vertical-align: top;
+  display:inline;
+  text-align: right;
+  float:right;
+  width: 200px;
+  height: 5px;
+  padding:10px 5px 10px 5px;
+
+}
+
+
+span.__text{
+display: inline-block;
+width: 80%;
+background:#49ba8e;
+text-align: center;
+padding: 4px;
+}

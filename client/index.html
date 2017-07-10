@@ -1,0 +1,154 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+   <link rel="stylesheet" href="app/mymovies/mymovies.css" />
+   <link rel="stylesheet" href="app/seatbooking/seatbooking.css" />
+   <link rel="stylesheet" href="app/manageTheatre/manageTheatre.css" />
+   <link rel="stylesheet" href="app/theatreTime/theatreTime.css" />
+   <link rel="stylesheet" href="app/home2/home2.css" />
+   <link rel="stylesheet" href="app/paymentsuccess/paymentsuccess.css" />
+   <link rel="stylesheet" href="app/payment/payment.css" />
+
+<!-- <link rel="stylesheet" href="../app/moviemapping/public/css/bootstrap-multiselect.css" type="text/css"/> -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+<!-- <link rel="stylesheet" type="text/css" href="./bower_components/multiselect/css/multi-select.css"> -->
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap-multiselect-master/dist/css/bootstrap-multiselect.css" /> -->
+<link rel="stylesheet" href="app/moviemapping/moviemapping.css" />
+<!-- <link rel="stylesheet" href="app/mapmovie/mapmovie.css" /> -->
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+      <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+      <link rel="stylesheet" href="app/app.css">
+      <!-- injector:css -->
+      <!-- endinjector -->
+    <!-- endbuild -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <!-- <script type="text/javascript" src="../app/moviemapping/public/js/bootstrap-multiselect.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2017.2.504/js/kendo.all.min.js"></script>
+
+  </head>
+  <body ng-app="yoTemplateApp">
+    <!--[if lt IE 7]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <navbar></navbar>
+    <div ng-view=""></div>
+    <footer></footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
+      <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+      <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+      <!-- endbower -->
+      <script src="socket.io-client/socket.io.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(.tmp) app/app.js -->
+<script src="bower_components/angular-ui/build/angular-ui.js"></script>
+      <script src="app/app.js"></script>
+      <!-- injector:js -->
+      <script src="app/admin/admin.module.js"></script>
+      <script src="components/auth/auth.module.js"></script>
+      <script src="components/util/util.module.js"></script>
+      <script src="app/account/account.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/admin/admin.controller.js"></script>
+      <script src="app/admin/admin.router.js"></script>
+      <script src="app/app.constant.js"></script>
+      <script src="app/home/home.controller.js"></script>
+      <script src="app/home/home.js"></script>
+      <script src="app/home2/home2.controller.js"></script>
+      <script src="app/home2/home2.js"></script>
+      <script src="app/main/main.controller.js"></script>
+      <script src="app/main/main.js"></script>
+      <script src="app/manageTheatre/manageTheatre.controller.js"></script>
+      <script src="app/manageTheatre/manageTheatre.js"></script>
+      <script src="app/moviemapping/moviemapping.controller.js"></script>
+      <script src="app/moviemapping/moviemapping.js"></script>
+      <script src="app/moviemapping/public/js/bootstrap-multiselect.js"></script>
+      <script src="app/moviemapping/public/js/datepicker.js"></script>
+      <script src="app/moviemapping/public/js/jquery-1.12.4.js"></script>
+      <script src="app/moviemapping/public/js/jquery-ui.js"></script>
+      <script src="app/movierating/movierating.controller.js"></script>
+      <script src="app/movierating/movierating.js"></script>
+      <script src="app/movies/movies.controller.js"></script>
+      <script src="app/movies/movies.js"></script>
+      <script src="app/mymovies/mymovies.controller.js"></script>
+      <script src="app/mymovies/mymovies.js"></script>
+      <script src="app/payment/payment.controller.js"></script>
+      <script src="app/payment/payment.js"></script>
+      <script src="app/paymentsuccess/paymentsuccess.controller.js"></script>
+      <script src="app/paymentsuccess/paymentsuccess.js"></script>
+      <script src="app/seatbooking/seatbooking.controller.js"></script>
+      <script src="app/seatbooking/seatbooking.js"></script>
+      <script src="app/theatre/theatre.controller.js"></script>
+      <script src="app/theatre/theatre.js"></script>
+      <script src="app/theatreTime/theatreTime.controller.js"></script>
+      <script src="app/theatreTime/theatreTime.js"></script>
+      <script src="components/auth/auth.service.js"></script>
+      <script src="components/auth/interceptor.service.js"></script>
+      <script src="components/auth/router.decorator.js"></script>
+      <script src="components/auth/user.service.js"></script>
+      <script src="components/footer/footer.directive.js"></script>
+      <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+      <script src="components/navbar/navbar.controller.js"></script>
+      <script src="components/navbar/navbar.directive.js"></script>
+      <script src="components/socket/socket.service.js"></script>
+      <script src="components/util/util.service.js"></script>
+      <!-- endinjector -->
+    <!-- endbuild -->
+  <script src="bower_components/bootstrap-multiselect-master/dist/js/bootstrap-multiselect.js"></script>
+<script src="bower_components/angular-bootstrap-multiselect/dist/angular-bootstrap-multiselect.min.js"></script>
+  </body>
+</html>

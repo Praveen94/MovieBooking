@@ -1,0 +1,74 @@
+/*.moviemenu{
+    height:50px;
+    width:auto;
+
+    margin-bottom:10px;
+}
+.theatremenu{
+    height:50px;
+    width:auto;
+    margin-bottom:10px;
+}
+.citymenu{
+    height:50px;
+    width:auto;
+    margin-bottom:10px;
+}
+.timemenu{
+    height:50px;
+    width:auto;
+    margin-bottom:10px;
+}
+.datemenu{
+    height:50px;
+    width:auto;
+    margin-bottom:10px;
+}
+
+.selectlist{
+    height:1px;
+    width: 150px;
+    margin-left: 100px;
+}
+.selectlist option {
+    margin: 40px;
+}
+*/
+.timemenu{
+    height:50px;
+    width:auto;
+    margin-top:100px;
+}
+
+
+/*#theatres{
+
+  height:auto;
+  width:auto;
+  margin-bottom: 40px;
+}*/
+
+
+/*.fr {
+    float: right;
+    margin-right:50px;
+}
+.fl {
+    float: left;
+
+}*/
+
+
+
+#theatreselected p ,#timeselected p,#dateselected p{
+    background-color: Transparent!important;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    display:inline;
+    margin:10px;
+    overflow: hidden;
+    outline:none;
+    border-color: #ffffff!important;
+    color:deepskyblue;
+}

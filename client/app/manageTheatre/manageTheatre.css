@@ -1,0 +1,19 @@
+#AddTheatre{
+margin-top: 20px;
+margin-bottom: 20px;
+
+
+}
+
+#DeleteTheatre,#TheatreDetails{
+  margin-top: 20px;
+
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: #136af7!important;
+  color: white!important;
+}
+/*.nav>li>a:active{
+  background-color: #136af7!important;
+  color: white!important;
+}*/

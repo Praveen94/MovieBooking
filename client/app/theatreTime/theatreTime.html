@@ -1,0 +1,57 @@
+<!-- <div class="container-fluid">
+
+<div class="theatre">
+  <div class="header">
+    <ul style="float:left" class="nav nav-pills nav-inline" ng-repeat="m in theatreTimeCtrl.theatre">
+        <li ng-repeat="date in m.ShowDate"|unique:'m.ShowDate'><a href="#"><span class="glyphicon glyphicon-calendar
+"></span>{{date}}</a></li>
+
+      </ul>
+</div>
+<table class="table table-hover" id="theatreTable">
+  <tr></tr>
+<tr class="theatreInfo" ng-repeat="t in theatreTimeCtrl.theatre.Theatres"><td style="padding:20px"  class="theatreName" ng-click="theatreTimeCtrl.StoreTheatre(t)"><span class="glyphicon glyphicon-film"> </span> {{t}}</td><td ng-repeat="time in theatreTimeCtrl.theatre.ShowTime"><a href="/seatbooking">{{time}}</a></td></tr>
+<tr><td></td></tr>
+</table>
+</div>
+</div> -->
+
+
+<!-- <div class="container-fluid">
+
+<div class="theatre">
+  <div class="header">
+    <ul style="float:left" class="nav nav-pills nav-inline" ng-repeat="m in theatreTimeCtrl.theatre">
+        <li ng-repeat="date in m.ShowDate"|unique:'m.ShowDate'><a href="#"><span class="glyphicon glyphicon-calendar
+"></span>{{date}}</a></li>
+
+      </ul>
+</div>
+<table class="table table-hover" id="theatreTable">
+  <tr></tr>
+<tr class="theatreInfo" ng-repeat="m in theatreTimeCtrl.theatre"><td style="padding:20px" ng-repeat="theatre in m.Theatres" class="theatreName" ng-click="theatreTimeCtrl.StoreTheatre(theatre)"><span class="glyphicon glyphicon-film"> </span> {{theatre}}</td><td ng-repeat="time in m.ShowTime"><a href="/seatbooking">{{time}}</a></td></tr>
+<tr><td></td></tr>
+</table>
+</div>
+</div> -->
+
+
+
+
+<div class="container-fluid">
+
+<div class="theatre">
+  <div class="header">
+    <ul style="float:left" class="nav nav-pills nav-inline" ng-repeat="m in theatreTimeCtrl.theatre">
+        <li ng-repeat="date in m.ShowDate"|unique:'m.ShowDate'><a href="#" ng-click="theatreTimeCtrl.StoreDate(date)"><span class="glyphicon glyphicon-calendar
+"></span>{{date}}</a></li>
+
+      </ul>
+</div>
+<table class="table table-hover" class="theatreTable" ng-repeat="m in theatreTimeCtrl.theatre">
+  <tr></tr>
+<tr class="theatreInfo" ng-repeat="theatre in m.Theatres"><td style="padding:20px" class="theatreName"><span class="glyphicon glyphicon-film"> </span> {{theatre}}</td><td ng-repeat="time in m.ShowTime"><a href="/seatbooking" ng-click="theatreTimeCtrl.StoreTheatre(theatre,time)">{{time}}</a></td></tr>
+<tr><td></td></tr>
+</table>
+</div>
+</div>

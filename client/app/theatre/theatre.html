@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="theatreCtrl.TheatreName" placeholder="Theatre Name" />
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="theatreCtrl.PlaceName" placeholder="Place Name" />
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="theatreCtrl.City" placeholder="City" />
+</div>
+<button class="btn btn-success" ng-click="theatreCtrl.AddTheatre()">Submit</button>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+<table class="table">
+
+    <tr><td>Theatre Name</td>
+    <td>Place Name</td>
+    <td>City</td>
+</tr>
+  <tr ng-repeat="t in theatreCtrl.theatre">
+    <td>{{t.TheatreName}}</td>
+<td>{{t.PlaceName}}</td>
+<td>{{t.City}}</td>
+</tr>
+</table>
+</div>
+</div>
+
+</div>
